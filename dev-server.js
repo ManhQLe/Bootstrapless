@@ -5,7 +5,7 @@ const less = require('less');
 const gulp = require('gulp')
 
 
-gulp.watch('./src/less/*.less').on("change", d => {
+gulp.watch('./src/public/app/less/*.less').on("change", d => {
 	let p = d.path.split("\\");
 
 	let filename = p[p.length - 1].split(".")[0];
