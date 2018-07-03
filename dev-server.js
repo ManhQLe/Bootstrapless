@@ -7,7 +7,6 @@ const gulp = require('gulp')
 
 gulp.watch('./src/public/app/less/*.less').on("change", d => {
 	let p = d.path.split("\\");
-
 	let filename = p[p.length - 1].split(".")[0];
 
 	fs.readFile(d.path, 'utf8', function (err, data) {
