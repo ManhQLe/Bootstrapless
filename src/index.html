@@ -13,8 +13,8 @@
     <script src="public/bootstrap/bootstrap.bundle.js"></script>
 </head>
 
-<body id="home">
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+<body id="home" data-spy="scroll" data-target="#main-nav" id="home">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
         <div class="container">
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -306,13 +306,30 @@
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer"><button class="btn btn-primary">Sumbit</button></div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
             </div>
         </div>
     </div>
 </body>
 <script>
     $("#year").text(new Date().getFullYear());
+    $("body").scrollspy({
+        target: '#main-nav'
+    })
+
+    $("#main-nav a").on('click', function (e) {
+        if (this.hash !== '') {
+            e.preventDefault()
+            const hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, () => {
+                window.location.hash = hash
+            });
+        }
+    })
 </script>
 
 </html>
