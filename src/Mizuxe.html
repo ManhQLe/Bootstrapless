@@ -13,8 +13,8 @@
     <script src="public/bootstrap/bootstrap.bundle.js"></script>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top py-4">
+<body id="home" data-spy="scroll" data-target="#main-nav">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
         <div class="container">
             <a href="#home" class="navbar-brand">
                 <img src="./public/images/Mizuxe/mlogo.png" width="50" height="50" />
@@ -213,7 +213,8 @@
                             <h3>Susan Williams</h3>
                             <h5 class="text-muted">Lead Writer</h5>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cumque quae animi dolorum, ad
-                                voluptate?</p>
+                                voluptate?
+                            </p>
                             <div class="d-flex justify-content-center">
                                 <div class="p-4">
                                     <a href="http://facebook.com"></a>
@@ -238,7 +239,8 @@
                             <h3>Grace Smith</h3>
                             <h5 class="text-muted">Co-writer</h5>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cumque quae animi dolorum, ad
-                                voluptate?</p>
+                                voluptate?
+                            </p>
                             <div class="d-flex justify-content-center">
                                 <div class="p-4">
                                     <a href="http://facebook.com"></a>
@@ -263,7 +265,8 @@
                             <h3>John Doe</h3>
                             <h5 class="text-muted">Editor</h5>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cumque quae animi dolorum, ad
-                                voluptate?</p>
+                                voluptate?
+                            </p>
                             <div class="d-flex justify-content-center">
                                 <div class="p-4">
                                     <a href="http://facebook.com"></a>
@@ -288,7 +291,8 @@
                             <h3>Kevin Swanson</h3>
                             <h5 class="text-muted">Designer</h5>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cumque quae animi dolorum, ad
-                                voluptate?</p>
+                                voluptate?
+                            </p>
                             <div class="d-flex justify-content-center">
                                 <div class="p-4">
                                     <a href="http://facebook.com"></a>
@@ -309,6 +313,79 @@
             </div>
         </div>
     </section>
+
+    <section id="contact" class="bg-ligh py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h3>Get In Touch</h3>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, porro.</p>
+                    <form action="">
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </span>
+                            </div>
+                            <textarea type="email" class="form-control" placeholder="Message" row="5"></textarea>
+                        </div>
+
+                        <input type="submit" value="submit" class="btn btn-primary btn-block btn-lg">
+                    </form>
+                </div>
+                <div class="col-lg-3 align-self-center">
+                    <img src="public/images/Mizuxe/mlogo.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 ml-auto">
+                    <p class="lead">Copyright &copy; <span id="year"></span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $("#year").text(new Date().getFullYear())
+
+        $('body').scrollspy({target:'#main-nav'});
+
+        $("#main-nav a").on('click', function (e) {
+        if (this.hash !== '') {
+            e.preventDefault()
+            const hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, () => {
+                window.location.hash = hash
+            });
+        }
+    })
+    </script>
 </body>
 
 </html>
