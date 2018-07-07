@@ -28,6 +28,16 @@ body {
   margin: auto;
   border-bottom: 1px #ddd solid;
 }
+#authors img {
+  margin-top: -50px;
+}
+#authors .card:hover {
+  background: #3292a6;
+  color: #fff;
+}
+#authors .card:hover .fab {
+  color: white;
+}
 .prim-back {
   background-color: #3292a6;
   border-color: #3292a6;
