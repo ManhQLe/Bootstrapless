@@ -56,3 +56,17 @@ body{
 #video-play a {
   color: white;
 }
+
+#page-header{
+  height:200px;
+  background: url(../../images/Glozzom/image1.jpg);
+  background-position: 0 -360px;
+  background-attachment: fixed;
+  color: white;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+}
+
+.about-img{
+  margin-top:-50px;
+}
