@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Glozzom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../public/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/font-awesome/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../public/app/css/Glozzom.css" />
+
+    <script src="../public/jquery/jquery.min.js"></script>
+    <script src="../public/bootstrap/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Glozzom</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header id="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto text-center">
+                    <h1>Contact Us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, facere.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACT SECTION  -->
+    <section id="contacts" class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card p-6">
+                        <div class="card-body">
+                            <h4>Get in Touch</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nihil?</p>
+                            <h4>Address</h4>
+                            <p>550 Main St, Boston MA</p>
+                            <h4>Email</h4>
+                            <p>Contact@blozzom.com</p>
+                            <h4>Phone</h4>
+                            <p>(555)-666-7777</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <div class="h3 text-center">Please fill out this form to contact us</div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="First Name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Last Name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Email Name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Phone Number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="submit" value="submit" class="btn btn-outline-danger btn-block">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STAFF-->
+
+    <section id="staff" class="py-5 text-center bg-dark text-white">
+        <div class="container">
+            <h1>Our Staff</h1>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="../public/images/Glozzom/person1.jpg" alt="" class="img-fluid rounded-circle mb-2">
+                    <h4>Jane Doe</h4>
+                    <small>Marketing Manager</small>
+                </div>
+                <div class="col-md-3">
+                    <img src="../public/images/Glozzom/person2.jpg" alt="" class="img-fluid rounded-circle mb-2">
+                    <h4>Sara Willams</h4>
+                    <small>Business Manager</small>
+                </div>
+                <div class="col-md-3">
+                    <img src="../public/images/Glozzom/person3.jpg" alt="" class="img-fluid rounded-circle mb-2">
+                    <h4>John Doe</h4>
+                    <small>CEO</small>
+                </div>
+                <div class="col-md-3">
+                    <img src="../public/images/Glozzom/person4.jpg" alt="" class="img-fluid rounded-circle mb-2">
+                    <h4>Steve Smith</h4>
+                    <small>Web Developer</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="text-center p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Copyright &copy;
+                        <span id="year"></span> Glozzom</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        $("#year").text(new Date().getFullYear())
+    </script>
+</body>
+
+</html>
