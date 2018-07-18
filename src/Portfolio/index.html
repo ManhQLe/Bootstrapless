@@ -9,10 +9,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../public/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../public/font-awesome/css/all.css" />
     <link rel="stylesheet" type="text/css" href="../public/app/css/Portfolio.css" />
+    <link rel="stylesheet" type="text/css" href="../public/lightbox/ekko-lightbox.css" />
 
     <script src="../public/jquery/jquery.min.js"></script>
     <script src="../public/bootstrap/bootstrap.bundle.js"></script>
-
+    <script src="../public/lightbox/ekko-lightbox.min.js"></script>
 </head>
 
 <body>
@@ -182,28 +183,90 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
 
-        <!--HEADER-->
-        <footer id="main-footer" class="p-5 bg-dark text-white">
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="#" class="btn btn-outline-light">
-                        <i class="fas fa-cloud"></i> Download Resume
-                    </a>
-                </div>
+        <!-- WORK -->
+        <div id="work" class="collapse">
+            <div class="card card-body bg-warning text-white py-5">
+                <h2>
+                    My Work
+                </h2>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, autem!</p>
             </div>
-        </footer>
-    </div>
+            <div class="card card-body py-5">
+                <h3>What have I done?</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum libero, odio atque ab soluta inventore?</p>
+                <div class="row no-gutters">
+                    <div class="col-md-3">
+                        <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox">
+                            <img src="https://unsplash.it/600.jpg?image=252" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://unsplash.it/1200/768.jpg?image=253&v=1" data-toggle="lightbox">
+                            <img src="https://unsplash.it/600.jpg?image=253&v=1" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://unsplash.it/1200/768.jpg?image=254&v=2" data-toggle="lightbox">
+                            <img src="https://unsplash.it/600.jpg?image=254&v=2" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://unsplash.it/1200/768.jpg?image=255&v=2" data-toggle="lightbox">
+                            <img src="https://unsplash.it/600.jpg?image=255&v=2" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    </row>
+                </div>
+                <div class="row no-gutters">
+                        <div class="col-md-3">
+                            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox">
+                                <img src="https://unsplash.it/600.jpg?image=256" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="https://unsplash.it/1200/768.jpg?image=257&v=1" data-toggle="lightbox">
+                                <img src="https://unsplash.it/600.jpg?image=257&v=1" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="https://unsplash.it/1200/768.jpg?image=258&v=2" data-toggle="lightbox">
+                                <img src="https://unsplash.it/600.jpg?image=258&v=2" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="https://unsplash.it/1200/768.jpg?image=259&v=2" data-toggle="lightbox">
+                                <img src="https://unsplash.it/600.jpg?image=259&v=2" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        </row>
+                    </div>
+            </div>
 
-    <script>
-        $('.port-item').click(() => {
-            $('.collapse').collapse('hide');
-        })
-    </script>
+            <!--FOOTER-->
+            <footer id="main-footer" class="p-5 bg-dark text-white">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="#" class="btn btn-outline-light">
+                            <i class="fas fa-cloud"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script>
+            $('.port-item').click(() => {
+                $('.collapse').collapse('hide');
+            })
+
+            $(document).on('click', '[data-toggle="lightbox"]', function (e) {
+                e.preventDefault();
+                $(this).ekkoLightbox();
+            })
+        </script>
 </body>
 
 </html>
